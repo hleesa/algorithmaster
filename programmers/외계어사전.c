@@ -35,7 +35,7 @@ int solution(const char* spell[], size_t spell_len, const char* dic[], size_t di
 
 int solution2(const char* spell[], size_t spell_len, const char* dic[], size_t dic_len) {
     const int C_MAX = 256;
-    int s_map[C_MAX] = {0,};전
+    int s_map[C_MAX] = {0,};
 
     for (size_t i = 0; i < spell_len; ++i) {
         ++s_map[spell[i][0]];
