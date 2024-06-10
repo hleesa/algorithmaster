@@ -2,9 +2,9 @@
 
 
 //v2
-int gcd2(int a, int b){
+int gcd2(int a, int b) {
     int c;
-    while(b){
+    while (b) {
         c = a % b;
         a = b;
         b = c;
@@ -12,13 +12,13 @@ int gcd2(int a, int b){
     return a;
 }
 
-int lcm(int a, int b){
-    return a * (b / gcd2(a,b));
+int lcm(int a, int b) {
+    return a * (b / gcd2(a, b));
 }
 
 int solution2(int arr[], size_t arr_len) {
     int ans = arr[0];
-    for(size_t i = 1; i < arr_len; ++i){
+    for (size_t i = 1; i < arr_len; ++i) {
         ans = lcm(ans, arr[i]);
     }
     return ans;
